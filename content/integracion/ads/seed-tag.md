@@ -1,3 +1,9 @@
+---
+title: SeedTag
+description: Learn how to use @nuxt/content.
+picture: https://blog.hubspot.es/marketing/ejemplos-de-blogs
+
+---
 # SeedTag
 
 Seedtag es una start up española desarrollada por Pablo López, Jorge Poyatos y Albert Nieto, que busca aprovechar el

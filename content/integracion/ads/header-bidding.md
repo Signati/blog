@@ -1,3 +1,8 @@
+---
+title: Bidding
+description: Learn how to use @nuxt/content.
+picture: https://blog.hubspot.es/marketing/ejemplos-de-blogs
+---
 # Header Bidding
 
 _El header bidding consiste en hacer posible la puja de la compra de espacios publicitarios mediante la cabecera (header) de la página web, anticipándose a la carga de la misma.

@@ -1,3 +1,10 @@
+---
+title: Google Ads
+description: Learn how to use @nuxt/content.
+picture: https://blog.hubspot.es/marketing/ejemplos-de-blogs
+createdAt: DateTime
+updatedAt: DateTime
+---
 # Google Ads
 
 Google Ads es un servicio y un programa de la empresa Google que se utiliza para ofrecer publicidad patrocinada a

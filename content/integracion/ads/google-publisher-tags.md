@@ -1,3 +1,8 @@
+---
+title: Google Publisher Tags
+description: Learn how to use @nuxt/content.
+picture: https://blog.hubspot.es/marketing/ejemplos-de-blogs
+---
 # Google Publisher Tags
 
 _Google Publisher Tag (GPT) es una biblioteca de etiquetado de anuncios para Google Ad Manager que se utiliza para crear

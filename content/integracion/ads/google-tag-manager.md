@@ -1,3 +1,8 @@
+---
+title: Google Tag Manager
+description: Learn how to use @nuxt/content.
+picture: https://blog.hubspot.es/marketing/ejemplos-de-blogs
+---
 # Google Tag Manager
 
 Google Tag Manager ofrece una variable de capa de datos especial llamada event , que se usa en los procesadores de

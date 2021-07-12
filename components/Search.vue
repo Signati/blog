@@ -23,6 +23,7 @@
         @focus="onFocus"
         @click="menuModel=true"
         @focusout="onFocus"
+        @input="$fetch"
       >
         <template #prepend-inner>
           <v-icon
@@ -50,6 +51,12 @@ export default defineComponent({
   name: 'DefaultSearch',
   components: {
     SearchResults
+  },
+  async fetch() {
+    const data = await this.$content("integracion","ads").only(['title',"picture"])
+      .search(this.searchString)
+      .fetch()
+    console.log(data, this.searchString)
   },
   setup() {
 

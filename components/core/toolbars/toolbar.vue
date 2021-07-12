@@ -46,7 +46,7 @@ const Toolbar = defineComponent<PropsToolbar>({
     }
   },
   setup(props: { value: boolean, hiddenMenu: boolean }, {emit, root}) {
-    const title = 'Wiki Televisa Digital'
+    const title = 'Signati'
     const clipped = ref(false)
     const open = computed(() => {
       return props.value;
