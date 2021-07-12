@@ -1,0 +1,98 @@
+import {RoutePath} from "~/common/types/RoutePath";
+
+export let menu: RoutePath[] = [
+  {
+    id: 1,
+    name: 'Integracion',
+    fatherID: null,
+    level: '1',
+    url: '',
+    icon: '',
+    children: [
+      {
+        id: 2,
+        name: 'Ads',
+        fatherID: null,
+        level: '1',
+        url: '',
+        icon: 'mdi-package',
+        children: [
+          {
+            id: 2,
+            name: 'Google Ads',
+            fatherID: null,
+            level: '1',
+            url: '/integracion/ads/google-ads',
+            icon: 'mdi-package',
+            children: [],
+          },
+          {
+            id: 2,
+            name: 'Google Publisher Tags(GPT)',
+            fatherID: null,
+            level: '1',
+            url: '/integracion/ads/google-publisher-tags',
+            icon: 'mdi-package',
+            children: [],
+          },
+          {
+            id: 2,
+            name: 'Google Tag Manager(GTM)',
+            fatherID: null,
+            level: '1',
+            url: '/integracion/ads/google-tag-manager',
+            icon: 'mdi-package',
+            children: [],
+          },
+          {
+            id: 2,
+            name: 'Header Bidding',
+            fatherID: null,
+            level: '1',
+            url: '/integracion/ads/header-bidding',
+            icon: 'mdi-package',
+            children: [],
+          },
+          {
+            id: 2,
+            name: 'SeedTag',
+            fatherID: null,
+            level: '1',
+            url: '/integracion/ads/seed-tag',
+            icon: 'mdi-package',
+            children: [],
+          },
+          {
+            id: 2,
+            name: 'Teads',
+            fatherID: null,
+            level: '1',
+            url: '/integracion/ads/teads',
+            icon: 'mdi-package',
+            children: [],
+          },
+
+        ],
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: 'TypeScript',
+    fatherID: null,
+    level: '1',
+    url: '',
+    icon: '',
+    children: [
+      {
+        id: 2,
+        name: 'Funciones',
+        fatherID: null,
+        level: '1',
+        url: '/typescript/funciones',
+        icon: 'mdi-package',
+        children: [],
+      },
+    ],
+  },
+]
