@@ -1,7 +1,7 @@
 ---
 title: Teads
 description: Learn how to use @nuxt/content.
-picture: https://blog.hubspot.es/marketing/ejemplos-de-blogs
+picture: https://stacole.com/wp-content/uploads/2021/07/Captura-de-pantalla-de-2021-07-04-20-29-14.png
 ---
 Teads, creadores de los formatos de vídeo outstream y marketplace de vídeo publicitario, es una empresa global de
 tecnología fundada en 2011 y especializada en el desarrollo de innovadoras soluciones publicitarías de vídeo. ... Teads

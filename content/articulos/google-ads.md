@@ -1,7 +1,7 @@
 ---
 title: Google Ads
 description: Learn how to use @nuxt/content.
-picture: https://blog.hubspot.es/marketing/ejemplos-de-blogs
+picture: https://lh3.googleusercontent.com/nupo3HWMIUeuul9r2IBSfpBo568bL-STG9nA71dUuW97DnhAXFgm2WWjczhTFqRHQZRf5VA-_PmxIZaIAXhOUrzfr5unPjFuW9za=w0
 createdAt: DateTime
 updatedAt: DateTime
 ---

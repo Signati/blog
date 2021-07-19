@@ -46,10 +46,24 @@ declare module '*.module.sass' {
   const classes: { readonly [key: string]: string }
   export default classes
 }
-declare module '*.json' {}
+declare module '*.json' {
+}
 
 declare module '*.rtf'
 declare module '*.md' {
   const content: string;
   export default content;
+}
+
+declare module '@nuxt/types' {
+  import {contentFunc} from "@nuxt/content/types/content";
+  import {IContentOptions} from "@nuxt/content";
+
+  interface Context {
+    $content: contentFunc;
+  }
+
+  interface Configuration {
+    content?: IContentOptions;
+  }
 }

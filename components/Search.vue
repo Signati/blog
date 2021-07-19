@@ -13,7 +13,7 @@
         v-model="searchString"
         v-bind="attrs"
         :background-color="(!isDark && !isFocused) ? 'grey lighten-3' : undefined"
-        :class="[isSearching ? 'rounded-b-0' : ' rounded-lg','d-sm-none d-md-flex']"
+        :class="[isSearching ? 'rounded-b-0' : ' rounded-lg']"
         :flat="!isFocused && !isSearching"
         :placeholder="placeholder"
         autocomplete="off"
@@ -53,10 +53,15 @@ export default defineComponent({
     SearchResults
   },
   async fetch() {
-    const data = await this.$content("integracion","ads").only(['title',"picture"])
+    const article = await this.$content("articulos")
+      .only(['title', "picture", "description", "createdAt"])
       .search(this.searchString)
       .fetch()
-    console.log(data, this.searchString)
+    this.$store.commit("article/setArticles", article)
+    console.log(article, this.searchString)
+    return {
+      article
+    }
   },
   setup() {
 

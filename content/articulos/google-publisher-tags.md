@@ -1,7 +1,7 @@
 ---
 title: Google Publisher Tags
 description: Learn how to use @nuxt/content.
-picture: https://blog.hubspot.es/marketing/ejemplos-de-blogs
+picture: https://stacole.com/wp-content/uploads/2021/07/Captura-de-pantalla-de-2021-07-04-20-29-14.png
 ---
 # Google Publisher Tags
 

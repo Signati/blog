@@ -1,3 +1,10 @@
+---
+title: typescript
+description: Learn how to use @nuxt/content.
+picture: https://stacole.com/wp-content/uploads/2021/07/Captura-de-pantalla-de-2021-07-04-20-29-14.png
+createdAt: DateTime
+updatedAt: DateTime
+---
 # Funciones
 
 _El header bidding consiste en hacer posible la puja de la compra de espacios publicitarios mediante la cabecera (header) de la página web, anticipándose a la carga de la misma.

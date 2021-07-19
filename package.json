@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts",
+    "dev": "nuxt",
     "now-build": "nuxt build",
-    "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate"
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
   },
   "dependencies": {
     "@egoist/vue-emotion": "^0.6.2",
@@ -15,7 +15,6 @@
     "@mdi/js": "^5.9.55",
     "@nuxt/babel-preset-app": "^2.15.4",
     "@nuxt/content": "^1.11.1",
-    "@nuxt/typescript-runtime": "^2.1.0",
     "@nuxtjs/axios": "^5.12.5",
     "@nuxtjs/composition-api": "^0.23.2",
     "@nuxtjs/markdownit": "^2.0.0",
@@ -28,6 +27,7 @@
     "js-cookie": "^2.2.1",
     "markdown-it-prism": "^2.1.6",
     "mobile-device-detect": "^0.4.3",
+    "net": "^1.0.2",
     "nuxt": "^2.15.4",
     "prismjs": "^1.23.0",
     "vue-emotion": "^0.4.29",
