@@ -12,12 +12,9 @@ export const state = (): ArticleStore => ({
 export const mutations = {
   setArticles(state: ArticleStore, routePaths: Articles[]) {
     state.articles = routePaths.map((value, i) => {
-      return ((i % 3) === 0) ? [
-        {
+      return ((i % 3) === 0) ? {
           extension: 'ads',
-        } as Articles
-        , value
-      ] : value
+        } as Articles : value
     })
 
   }

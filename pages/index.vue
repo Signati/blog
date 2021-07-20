@@ -13,18 +13,10 @@
           :to="article.path"
         >
           <v-img
-            v-if="hover"
             class="white--text align-end"
             height="200px"
             transition="scale-transition"
             :src="article.picture"/>
-          <v-img
-            v-else
-            class="white--text align-end"
-            height="200px"
-            content-class="img"
-            :src="article.picture"/>
-
           <v-card-title>{{ article.title }}</v-card-title>
           <v-card-subtitle class="pb-0">
             {{ article.description }}
@@ -34,12 +26,14 @@
             <div>{{ article.createdAt }}</div>
           </v-card-text>
         </v-card>
-
-        <InFeedAdsense
+        <span
           v-else
+        >
+          <InFeedAdsense
           data-ad-client="ca-pub-3148933927224946"
           data-ad-slot="1234567890">
         </InFeedAdsense>
+        </span>
       </v-col>
     </v-row>
   </client-only>
