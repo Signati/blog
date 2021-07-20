@@ -2,6 +2,9 @@
   <v-container>
     <v-row>
       <v-col cols="12" md="12">
+        <pre>
+        {{ article }}
+        </pre>
         <nuxt-content :document="article"/>
       </v-col>
     </v-row>
@@ -10,9 +13,11 @@
 
 <script lang="ts">
 import {defineComponent, onMounted} from "@nuxtjs/composition-api";
+import {Ctx} from "~/common/types/NuxtCustom";
 
 export default defineComponent({
-  async asyncData({$content, params, route}) {
+  layout: "article",
+  async asyncData({$content, params, route}: Ctx) {
     console.log(route.fullPath)
     const article = await $content(route.fullPath).fetch()
 

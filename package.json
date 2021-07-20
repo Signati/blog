@@ -31,9 +31,11 @@
     "nuxt": "^2.15.4",
     "prismjs": "^1.23.0",
     "vue-emotion": "^0.4.29",
+    "vue-google-adsense": "^1.9.3",
     "vue-gtag": "^1.14.0",
     "vue-loader": "^15.9.6",
     "vue-markdown-render": "^1.1.1",
+    "vue-script2": "^2.1.0",
     "vuex-pathify": "^1.4.5",
     "vuex-persist": "^3.1.3"
   },

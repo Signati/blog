@@ -16,7 +16,7 @@ export const actions = {
       try {
          const data = await getArticles()
          commit("article/setArticles", data)
-         console.log("store", data,)
+         // console.log("store", data,)
 
         //  console.log(auth)
       } catch (err) {

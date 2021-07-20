@@ -38,7 +38,8 @@ export default {
     {
       src: '~/common/plugins/vuex-persist',
       ssr: false
-    }
+    },
+    {src: '~/common/plugins/vue-google-adsense', ssr: false}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

@@ -1,16 +1,16 @@
 <template>
-  <v-row>
-    <v-col cols="12"
-           sm="12"
-           md="4"
-           lg="4"
-           v-for="(article, i) of articles"
-           :key="i"
-    >
-
-      <v-hover v-slot="{ hover }">
+  <client-only>
+    <v-row>
+      <v-col cols="12"
+             sm="12"
+             md="4"
+             lg="4"
+             v-for="(article, i) of articles"
+             :key="i"
+      >
         <v-card
-          :color="hover ? 'blue': 'green'"
+          v-if="article.extension !=='ads'"
+          :to="article.path"
         >
           <v-img
             v-if="hover"
@@ -34,9 +34,16 @@
             <div>{{ article.createdAt }}</div>
           </v-card-text>
         </v-card>
-      </v-hover>
-    </v-col>
-  </v-row>
+
+        <InFeedAdsense
+          v-else
+          data-ad-client="ca-pub-3148933927224946"
+          data-ad-slot="1234567890">
+        </InFeedAdsense>
+      </v-col>
+    </v-row>
+  </client-only>
+
 </template>
 
 <script lang="ts">
@@ -81,10 +88,10 @@ export default defineComponent({
       const article = await getArticles()
       commit("article/setArticles", article)
     })
-    useAsync(async () => {
-      const article = await getArticles()
-      commit("article/setArticles", article)
-    })
+    /* useAsync(async () => {
+       const article = await getArticles()
+       commit("article/setArticles", article)
+     })*/
 
     return {
       network,

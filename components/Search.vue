@@ -23,6 +23,7 @@
         @focus="onFocus"
         @click="menuModel=true"
         @focusout="onFocus"
+        @input="$fetch"
       >
         <template #prepend-inner>
           <v-icon
@@ -52,16 +53,16 @@ export default defineComponent({
   components: {
     SearchResults
   },
-  // async fetch() {
-  //   const article = await this.$content("articulos", )
-  //     .only(['title', "picture", "description", "createdAt"])
-  //
-  //     .search(this.searchString)
-  //     .limit(1)
-  //     .fetch()
-  //  // this.$store.commit("article/setArticles", article)
-  //   console.log(article, this.searchString)
-  // },
+  async fetch() {
+    const article = await this.$content("articulos", )
+      .only(['title', "picture", "description", "createdAt"])
+
+      .search(this.searchString)
+      .limit(1)
+      .fetch()
+   // this.$store.commit("article/setArticles", article)
+    // console.log(article, this.searchString)
+  },
   setup() {
 
 
