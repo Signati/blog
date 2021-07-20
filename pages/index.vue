@@ -1,6 +1,5 @@
 <template>
   <v-row>
-    {{articles}}
     <v-col cols="12"
            sm="12"
            md="4"
@@ -58,6 +57,7 @@ import {useNetwork} from '@vueuse/core'
 import {computed, reactive} from "@vue/composition-api";
 import type {Context} from "@nuxt/types";
 import {$content} from "@nuxt/content/";
+import {getArticles} from "~/common/service/Articles";
 
 export default defineComponent({
   components: {
@@ -77,15 +77,14 @@ export default defineComponent({
       // @ts-ignore
       return state.article.articles
     })
-    onMounted(() => {
-
+    onMounted(async () => {
+      const article = await getArticles()
+      commit("article/setArticles", article)
     })
-    // useAsync(async () => {
-    //   const article = await $content("articulos")
-    //     .only(['title', "picture", "description", "createdAt"])
-    //     .fetch()
-    //   commit("article/setArticles", article)
-    // })
+    useAsync(async () => {
+      const article = await getArticles()
+      commit("article/setArticles", article)
+    })
 
     return {
       network,
