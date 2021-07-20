@@ -1,5 +1,6 @@
 <template>
   <v-row>
+    {{articles}}
     <v-col cols="12"
            sm="12"
            md="4"
