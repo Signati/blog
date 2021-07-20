@@ -1,6 +1,7 @@
 import {parse} from 'cookie'
 import {Context} from "@nuxt/types";
 import {$content} from "@nuxt/content"
+import {getArticles} from "~/common/service/Articles";
 
 export interface ContextExpress extends Context {
 }
@@ -13,11 +14,9 @@ export const actions = {
   async nuxtServerInit({commit}, {req, isServer, $vuetify}: ContextExpress) {
     if (req.headers.cookie) {
       try {
-        // const data = await $content("articulos")
-        //   .only(['title', "picture"])
-        //   .fetch()
-
-        //console.log("store", data,)
+         const data = await getArticles()
+         commit("article/setArticles", data)
+         console.log("store", data,)
 
         //  console.log(auth)
       } catch (err) {

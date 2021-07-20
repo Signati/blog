@@ -10,9 +10,10 @@
 
 <script lang="ts">
 import {defineComponent, onMounted} from "@nuxtjs/composition-api";
+import {Ctx} from "~/common/types/NuxtCustom";
 
 export default defineComponent({
-  async asyncData({$content, params, route}) {
+  async asyncData({$content, params, route}: Ctx) {
     console.log(route.fullPath)
     const article = await $content(route.fullPath).fetch()
 

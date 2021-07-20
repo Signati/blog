@@ -23,7 +23,6 @@
         @focus="onFocus"
         @click="menuModel=true"
         @focusout="onFocus"
-        @input="$fetch"
       >
         <template #prepend-inner>
           <v-icon
@@ -45,6 +44,7 @@
 <script lang="ts">
 import {defineComponent, ref} from "@nuxtjs/composition-api";
 import SearchResults from './SearchResults.vue'
+import {Context} from "@nuxt/types/app";
 // This behavior should be easier to do with solo fields
 // TODO: Review this for v3
 export default defineComponent({
@@ -52,17 +52,16 @@ export default defineComponent({
   components: {
     SearchResults
   },
-  async fetch() {
-    const article = await this.$content("articulos")
-      .only(['title', "picture", "description", "createdAt"])
-      .search(this.searchString)
-      .fetch()
-    this.$store.commit("article/setArticles", article)
-    console.log(article, this.searchString)
-    return {
-      article
-    }
-  },
+  // async fetch() {
+  //   const article = await this.$content("articulos", )
+  //     .only(['title', "picture", "description", "createdAt"])
+  //
+  //     .search(this.searchString)
+  //     .limit(1)
+  //     .fetch()
+  //  // this.$store.commit("article/setArticles", article)
+  //   console.log(article, this.searchString)
+  // },
   setup() {
 
 

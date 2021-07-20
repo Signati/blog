@@ -4,7 +4,8 @@
            sm="12"
            md="4"
            lg="4"
-           v-for="article of articles"
+           v-for="(article, i) of articles"
+           :key="i"
     >
 
       <v-hover v-slot="{ hover }">
@@ -42,7 +43,16 @@
 import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
 // import Markup from "~/components/Markup.vue";
-import {defineComponent, onMounted, ref, useStore} from "@nuxtjs/composition-api";
+import {
+  defineComponent,
+  onMounted,
+  onServerPrefetch,
+  ref,
+  ssrRef,
+  useAsync,
+  useContext,
+  useStore
+} from "@nuxtjs/composition-api";
 import {useNetwork} from '@vueuse/core'
 import {computed, reactive} from "@vue/composition-api";
 import type {Context} from "@nuxt/types";
@@ -59,8 +69,9 @@ export default defineComponent({
     },
   },
   setup(props, {}) {
+
     const network = reactive(useNetwork())
-    const {state} = useStore()
+    const {state, commit} = useStore()
     const articles = computed(() => {
       // @ts-ignore
       return state.article.articles
@@ -68,6 +79,13 @@ export default defineComponent({
     onMounted(() => {
 
     })
+    // useAsync(async () => {
+    //   const article = await $content("articulos")
+    //     .only(['title', "picture", "description", "createdAt"])
+    //     .fetch()
+    //   commit("article/setArticles", article)
+    // })
+
     return {
       network,
       articles

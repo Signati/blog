@@ -54,16 +54,3 @@ declare module '*.md' {
   const content: string;
   export default content;
 }
-
-declare module '@nuxt/types' {
-  import {contentFunc} from "@nuxt/content/types/content";
-  import {IContentOptions} from "@nuxt/content";
-
-  interface Context {
-    $content: contentFunc;
-  }
-
-  interface Configuration {
-    content?: IContentOptions;
-  }
-}

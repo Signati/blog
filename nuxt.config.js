@@ -4,7 +4,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   telemetry: false,
   server: {
-    port: 8080
+    port: 4000
   },
   head: {
     titleTemplate: '%s - docs',
