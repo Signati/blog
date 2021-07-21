@@ -17,14 +17,20 @@
     />
     <v-toolbar-title class="ml-3" v-text="title"/>
     <v-spacer/>
-    <v-btn to="/"  text>
-      Home
+    <v-btn to="/" text>
+      home
+    </v-btn>
+    <v-btn to="/blog" text>
+      articulos
+    </v-btn>
+    <v-btn to="/" text>
+      linux
     </v-btn>
     <v-btn to="/me" text>
-      About Me
+      Programacion
     </v-btn>
-    <v-btn  to="/blog" text>
-      Blog
+    <v-btn to="/windows" text>
+      Windows
     </v-btn>
   </v-app-bar>
 </template>
@@ -44,7 +50,7 @@ import {useLocalStorage} from "@vueuse/core";
 import {useTheme} from "~/common/composables/useTheme";
 import {useRoute, useRouter} from "@nuxtjs/composition-api";
 
-const Toolbar = defineComponent<PropsToolbar>({
+const ToolbarBlog = defineComponent<PropsToolbar>({
   components: {
     Search
   },
@@ -90,5 +96,5 @@ const Toolbar = defineComponent<PropsToolbar>({
     };
   },
 });
-export default Toolbar;
+export default ToolbarBlog;
 </script>

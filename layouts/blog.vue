@@ -1,6 +1,6 @@
 <template>
   <v-app dark>
-    <Toolbar v-model="drawer" :hidden-menu="true"></Toolbar>
+    <ToolbarBlog v-model="drawer" :hidden-menu="true"></ToolbarBlog>
     <v-main>
       <nuxt/>
     </v-main>
@@ -52,7 +52,7 @@ import {
   useRouter,
   useStore
 } from "@nuxtjs/composition-api";
-import Toolbar from "~/components/core/toolbars/toolbar.vue";
+import ToolbarBlog from "~/components/core/toolbars/toolbar-blog.vue";
 import {mdiGithub} from '@mdi/js';
 import {RoutePath} from "~/common/types/RoutePath";
 import {isMobile, isTablet} from 'mobile-device-detect';
@@ -60,7 +60,7 @@ import Menu from "~/components/Menu/Menu.vue";
 
 export default defineComponent({
   components: {
-    Toolbar,
+    ToolbarBlog,
     Menu
   },
   setup() {
