@@ -2,19 +2,8 @@
   <v-app dark>
     <Toolbar v-model="drawer" :hidden-menu="true"></Toolbar>
     <v-main>
-      <v-container>
-        <v-row>
-          <v-col cols="12" sm="2" md="2" lg="2">
-          </v-col>
-          <v-col cols="12" sm="12" md="8" lg="8">
-            <nuxt/>
-          </v-col>
-          <v-col cols="12" sm="2" md="2" lg="2">
-          </v-col>
-        </v-row>
-      </v-container>
+      <nuxt/>
     </v-main>
-
     <v-footer
       dark
       padless
