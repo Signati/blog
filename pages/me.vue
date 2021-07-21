@@ -23,7 +23,7 @@ import {computed, reactive} from "@vue/composition-api";
 import type {Context} from "@nuxt/types";
 import {$content} from "@nuxt/content/";
 import {getArticles} from "~/common/service/Articles";
-import Jumbotron from "~/components/core/Jumbotron";
+import Jumbotron from "~/components/core/Jumbotron.vue";
 
 export default defineComponent({
   components: {
